@@ -1,16 +1,37 @@
-# Nutridash
+# SiNutre
 
-Dashboard de nutrição em React, convertido a partir do protótipo HTML original
-em `../Nutridash`. Toda a estilização foi migrada para Tailwind CSS (com daisyUI
-v5 como plugin) e a UI foi quebrada em componentes reutilizáveis.
+O SiNutre é uma aplicação web para registro e acompanhamento de refeições, alimentos, consumo de macronutrientes e informações nutricionais do usuário.
 
-## Stack
+Projeto desenvolvido como Projeto Final do curso de formação em desenvolvimento web moderno.
 
-- Vite 6 + React 19 + TypeScript
-- Tailwind CSS v4 (via `@tailwindcss/vite`)
-- daisyUI v5 (plugin do Tailwind)
-- @phosphor-icons/react para os ícones
-- ESLint 9 (flat config) + typescript-eslint
+## Tecnologias utilizadas
+
+### Frontend
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- DaisyUI
+
+
+### Backend
+
+- Node.js
+- Express
+- Prisma ORM
+- SQLite
+
+## Funcionalidades desenvolvidas
+
+- [x] Alterar um alimento cadastrado
+- [x] Excluir um alimento cadastrado
+- [x] Cadastro e edição de alimentos com validação
+- [x] Cadastro de dados complementares do usuário
+- [x] Alteração de dados complementares do usuário
+- [x] Exibição da meta diária de calorias no Dashboard
+- [x] Logout do usuário
+- [x] Alteração das cores da interface
 
 ## Estrutura
 
@@ -43,7 +64,13 @@ npm run lint    # ESLint em todo o projeto
 npm run preview # preview do build
 ```
 
-## Tema
+## Backend
 
-O tema customizado `sinutre` (paleta verde) está definido em
-`src/styles/theme.css` usando a sintaxe `@plugin 'daisyui/theme'` do daisyUI v5.
+O backend do SiNutre está em um repositório separado.
+
+Link do repositório: 
+
+## Links da aplicação
+
+Frontend (Vercel):
+Backend (Railway):
