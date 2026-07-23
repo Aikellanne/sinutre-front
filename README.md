@@ -73,4 +73,5 @@ Link do repositório:
 ## Links da aplicação
 
 Frontend (Vercel):
+
 Backend (Railway):
