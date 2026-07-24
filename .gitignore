@@ -33,3 +33,6 @@ build
 .env
 .env.local
 .env.*.local
+
+tsconfig.app.tsbuildinfo
+tsconfig.node.tsbuildinfo
