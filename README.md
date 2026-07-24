@@ -1,8 +1,6 @@
 # SiNutre
 
-O SiNutre é uma aplicação web para registro e acompanhamento de refeições, alimentos, consumo de macronutrientes e informações nutricionais do usuário.
-
-Projeto desenvolvido como Projeto Final do curso de formação em desenvolvimento web moderno.
+O SiNutre é uma aplicação web para registro e acompanhamento de refeições, alimentos, consumo de macronutrientes e informações nutricionais do usuário. Este projeto foi desenvolvido como Projeto Final do curso de Formação em Desenvolvimento Web Moderno.
 
 ## Tecnologias utilizadas
 
@@ -14,7 +12,6 @@ Projeto desenvolvido como Projeto Final do curso de formação em desenvolviment
 - Tailwind CSS
 - DaisyUI
 
-
 ### Backend
 
 - Node.js
@@ -23,10 +20,10 @@ Projeto desenvolvido como Projeto Final do curso de formação em desenvolviment
 - SQLite
 
 ## Funcionalidades desenvolvidas
-
-- [x] Alterar um alimento cadastrado
-- [x] Excluir um alimento cadastrado
-- [x] Cadastro e edição de alimentos com validação
+- [x] Cadastro de alimentos
+- [x] Alteração de alimentos
+- [x] Exclusão de alimentos
+- [x] Validação dos dados no cadastro e edição de alimentos
 - [x] Cadastro de dados complementares do usuário
 - [x] Alteração de dados complementares do usuário
 - [x] Exibição da meta diária de calorias no Dashboard
@@ -54,11 +51,35 @@ src/
 └── main.tsx
 ```
 
-## Scripts
+## Como executar o projeto
+
+Clone o repositório:
 
 ```bash
-npm install     # instala dependências
-npm run dev     # servidor de desenvolvimento (vite)
+git clone https://github.com/Aikellanne/sinutre-front.git
+```
+
+Entre na pasta:
+
+```bash
+cd sinutre-front
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute o projeto:
+
+```bash
+npm run dev
+```
+
+Outros comandos disponíveis:
+
+```bash
 npm run build   # build de produção (tsc -b + vite build)
 npm run lint    # ESLint em todo o projeto
 npm run preview # preview do build
@@ -66,12 +87,19 @@ npm run preview # preview do build
 
 ## Backend
 
-O backend do SiNutre está em um repositório separado.
+O backend deste projeto encontra-se em um repositório separado.
 
-Link do repositório: 
+Repositório: 
+https://github.com/Aikellanne/sinutre-back
 
-## Links da aplicação
+## Aplicação em produção
 
 Frontend (Vercel):
+https://...
 
 Backend (Railway):
+https://...
+
+## Autoria
+
+Projeto acadêmico com implementações e adaptações realizadas por Aikellanne Almeida.
