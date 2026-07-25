@@ -123,6 +123,19 @@ export function DashboardPage({ drawerId }: DashboardPageProps) {
     );
   }, [meals, caloriesGoal]);
 
+  const hasCaloriesGoal = macroSummary.caloriesGoal > 0;
+
+  const caloriesDifference =
+    macroSummary.calories - macroSummary.caloriesGoal;
+
+  const caloriesExceeded =
+    hasCaloriesGoal && caloriesDifference > 0.01;
+
+  const caloriesGoalReached =
+    hasCaloriesGoal && Math.abs(caloriesDifference) <= 0.01;
+
+  const remainingCalories = Math.abs(caloriesDifference);
+
   if (!user) {
     return null;
   }
@@ -146,6 +159,38 @@ export function DashboardPage({ drawerId }: DashboardPageProps) {
 
         <MacroStatsBar summary={macroSummary} />
 
+        {hasCaloriesGoal && (
+          <div
+            className={`rounded-xl border p-4 ${
+              caloriesExceeded
+                ? 'border-error/30 bg-error/10 text-error'
+                : caloriesGoalReached
+                  ? 'border-warning/30 bg-warning/10 text-warning'
+                  : 'border-success/30 bg-success/10 text-success'
+            }`}
+          >
+            <p className="font-semibold">
+              {caloriesExceeded
+                ? 'Meta calórica ultrapassada'
+                : caloriesGoalReached
+                  ? 'Meta calórica atingida'
+                  : 'Meta calórica dentro do limite'}
+            </p>
+
+            <p className="mt-1 text-sm">
+              {caloriesExceeded
+                ? `Você ultrapassou sua meta diária em ${remainingCalories.toFixed(
+                    0,
+                  )} kcal.`
+                : caloriesGoalReached
+                  ? 'Você atingiu exatamente sua meta calórica diária.'
+                  : `Você ainda pode consumir ${remainingCalories.toFixed(
+                      0,
+                    )} kcal hoje.`}
+            </p>
+          </div>
+        )}
+
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-6 items-stretch">
           <TotalMealsCard summary={mealsSummary} />
 
@@ -163,7 +208,6 @@ export function DashboardPage({ drawerId }: DashboardPageProps) {
         open={modal.open}
         typeMeal={modal.selectedCategory}
         onClose={modal.close}
-        onSave={modal.close}
         onMealCreated={loadMeals}
       />
     </>
