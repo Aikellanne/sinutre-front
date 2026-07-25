@@ -99,10 +99,10 @@ https://github.com/Aikellanne/sinutre-back
 ## Aplicação em produção
 
 Frontend (Vercel):
-https://...
+https://sinutre-front-ten.vercel.app
 
 Backend (Railway):
-https://...
+https://sinutre-back-production-8d77.up.railway.app
 
 ## Autoria
 
