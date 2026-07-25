@@ -1,6 +1,6 @@
 # SiNutre
 
-O SiNutre é uma aplicação web para registro e acompanhamento de refeições, alimentos, consumo de macronutrientes e informações nutricionais do usuário. Este projeto foi desenvolvido como Projeto Final do curso de Formação em Desenvolvimento Web Moderno.
+O SiNutre é uma aplicação web para acompanhamento nutricional, permitindo registrar refeições, acompanhar consumo calórico, visualizar macronutrientes, calcular IMC e monitorar métricas alimentares. Este projeto foi desenvolvido como Projeto Final do curso de Formação em Desenvolvimento Web Moderno.
 
 ## Tecnologias utilizadas
 
@@ -27,6 +27,10 @@ O SiNutre é uma aplicação web para registro e acompanhamento de refeições, 
 - [x] Cadastro de dados complementares do usuário
 - [x] Alteração de dados complementares do usuário
 - [x] Exibição da meta diária de calorias no Dashboard
+- [x] Aviso quando a meta calórica diária é ultrapassada
+- [x] Página de Progresso com métricas
+- [x] Cálculo do IMC com classificação
+- [x] Média calórica dos últimos 7 dias
 - [x] Logout do usuário
 - [x] Alteração das cores da interface
 
