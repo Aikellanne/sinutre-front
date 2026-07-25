@@ -162,22 +162,23 @@ export function BmiCard() {
   const bmi = calculateBmi(weight, height);
 
   return (
-    <article className="card border border-base-300 bg-base-100 shadow-sm">
-      <div className="card-body">
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-          <h2 className="card-title">
-            Índice de Massa Corporal
-          </h2>
+  <article className="card border border-base-300 bg-base-100 shadow-sm">
+    <div className="card-body">
+      <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+        <div className="min-w-0">
+          <div className="flex flex-wrap items-center gap-3">
+            <h2 className="card-title">
+              Índice de Massa Corporal
+            </h2>
 
-          <span
-            className={`badge ${bmi.badgeClass} badge-lg`}
-          >
-            {bmi.classification}
-          </span>
-        </div>
+            <span
+              className={`badge ${bmi.badgeClass} badge-lg whitespace-nowrap`}
+            >
+              {bmi.classification}
+            </span>
+          </div>
 
-        <div className="mt-4">
-          <p className="text-sm text-base-content/60">
+          <p className="mt-4 text-sm text-base-content/60">
             Seu IMC
           </p>
 
@@ -186,13 +187,13 @@ export function BmiCard() {
           </p>
         </div>
 
-        <div className="mt-4 grid grid-cols-2 gap-4">
+        <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:max-w-md">
           <div className="rounded-xl bg-base-200 p-4">
             <p className="text-sm text-base-content/60">
-              Peso
+              Peso atual
             </p>
 
-            <p className="text-xl font-semibold">
+            <p className="mt-1 text-xl font-semibold">
               {weight.toFixed(1)} kg
             </p>
           </div>
@@ -202,16 +203,19 @@ export function BmiCard() {
               Altura
             </p>
 
-            <p className="text-xl font-semibold">
+            <p className="mt-1 text-xl font-semibold">
               {height.toFixed(2)} m
             </p>
           </div>
         </div>
+      </div>
 
-        <p className="mt-4 text-sm text-base-content/70">
+      <div className="mt-5 rounded-xl bg-base-200/60 p-4">
+        <p className="text-sm text-base-content/70">
           {bmi.message}
         </p>
       </div>
-    </article>
-  );
+    </div>
+  </article>
+);
 }

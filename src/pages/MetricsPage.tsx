@@ -10,7 +10,7 @@ export function MetricsPage() {
         subtitle="Acompanhe seu IMC e seu consumo calórico."
       />
 
-      <section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <section className="mt-6 flex flex-col gap-6">
         <BmiCard />
         <AverageCaloriesCard />
       </section>
